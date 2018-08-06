@@ -5,10 +5,15 @@ Saul Lopez Molina.
 Lilliam Montoya Rodriguez.
 
 Descripción: 
-Hacer un juego tipo arcade de ping pong.
-Dos barritas horizontales que se muevan hacia arriba y abajo  con las letras “Q” (para arriba) y “A” (para abajo) para el jugador1 y “P” (para arriba) y “L” (para abajo) para el jugador2. 
-Cada vez que la bola llegue a tocar la pared izquierda o derecha se acumula un punto al jugador que la rebotó. Donde el primer jugador que llegue a 9 puntos ganará el partido.
-Apareciendo un trofeo y el texto “winner” en la mitad de la pantalla del jugador que resulte vencedor y el texto “loser” en el lado del jugador que perdió; con un botón ubicado en el centro que diga “start” para iniciar una nueva partida que nos devuelva a los valores por default. 
+Hacer una version online del clásico juego piedra papel o tijeras. 
+El jugador elige qué elemento utilizar entre una lista de iconos que representan respectivamente piedra , papel  o tijeras .
+al elegir cuál utilizar se seleccionará aleatoriamente un segundo elemento de la lista el cual será su contrincante.
+las reglas para ganar serán las mismas que siempre:
+piedra vence tijeras.
+tijeras cortan papel.
+papel vence piedra.
+y si ambos elementos son iguales se declara empate.
+Al decidir el ganador el browser mostrará un mensaje diciendo si el jugador ganó o perdió la ronda y un botón de iniciar de nuevo.
 
- ><((((º>   ><((((º>   <º))))><    ><((((º>
-  _ <º))))><  ~~~~~~~~~~~FIN~~~~~~~~~
+  <º))))><   ><((((º>   <º))))><    ><((((º>
+  <º))))><  ~~~~~~~~~~~FIN~~~~~~~~~
