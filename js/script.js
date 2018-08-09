@@ -306,14 +306,14 @@ function elegirGanador() {
 
                 mensaje.innerHTML = ganador;
                 resultado.appendChild(mensaje);
-                piedra.style.opacity = "0.3";
+                tijeras.style.opacity = "0.3";
             }else if (usuario == 4){
                 ganador="¡PIERDES! ";
                 ganador = ganador + " piedra aplasta lagarto";
                 
                 mensaje.innerHTML = ganador;
                 resultado.appendChild(mensaje);
-                piedra.style.opacity = "0.3";
+                lagarto.style.opacity = "0.3";
             }else{
                 ganador= "¡GANAS! ";
                 ganador = ganador + " spock vaporiza piedra";
@@ -337,12 +337,12 @@ function elegirGanador() {
                 resultado.appendChild(mensaje);
                 papel.style.opacity = "0.3";
                 papelPC.style.opacity = "0.3";
-            }else if(usuario ==3){
-                ganador="¡PIERDES! ";
+            }else if(usuario == 3){
+                ganador="¡GANAS! ";
                 ganador = ganador + " tijeras cortan papel";
                 mensaje.innerHTML = ganador;
                 resultado.appendChild(mensaje);
-                papel.style.opacity = "0.3";
+                papelPC.style.opacity = "0.3";
             }else if (usuario == 4){
                 ganador= "¡GANAS! ";
                 ganador = ganador + " lagarto devora papel";
@@ -350,11 +350,11 @@ function elegirGanador() {
                 resultado.appendChild(mensaje);
                 papelPC.style.opacity = "0.3";
             }else{
-                ganador= "¡GANAS! ";
+                ganador= "¡PIERDES! ";
                 ganador = ganador + " papel desautoriza spock";
                 mensaje.innerHTML = ganador;
                 resultado.appendChild(mensaje);
-                spockPC.style.opacity = "0.3";
+                spock.style.opacity = "0.3";
             }
             break;
         case 3:
