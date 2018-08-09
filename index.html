@@ -1,13 +1,48 @@
 <!DOCTYPE html>
 <html>
-    <head>
-        <meta charset="UTF-8">
-        <title>Piedra papel o tijeras</title>
-        <link rel="stylesheet" type="text/css" href="css/style.css">
-    </head>
-    <body>
-
-        
-        <script src="js/script.js"></script>
-    </body>    
+<head>
+  <meta charset="UTF-8">
+  <title>Juego piedra, papel, tijeras, lagarto, spock!</title>
+  <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+  <div class="contenedor">
+    <div class="clearfix">
+      <h1 id="titulo">Piedra 👊🏽 - Papel 🖐🏽 - Tijeras ✌🏽 - Lagarto 🐊 - Spock 🖖🏽</h1>
+      <div id="usuario" >
+        <h2 id="a">Usuario</h2>
+        <img id="pptls" class="usuario img" src="img/img.jpg" alt="Imagen principal de piedra papel o tijeras">
+        <img id="paper" class="usuario img" src="img/gif/86682.gif" alt="papel">
+        <img id="rock" class="usuario img" src="img/gif/piedra.png" alt="piedra">
+        <img id="cut" class="usuario img" src="img/gif/tijeras-01.gif" alt="tijeras">
+        <img id="lizard" class="usuario img" src="img/gif/lizard.gif" alt="lagarto">
+        <img id="spock" class="usuario img" src="img/gif/Spock.gif" alt="spock">
+      </div>
+      <div id="resultado">
+      </div>
+      <div id="pc" >
+        <h2 id="b">PC</h2>
+        <img id="pptlsPC" class="pc img" src="img/img.jpg" alt="Imagen principal de piedra papel o tijeras">
+        <img id="paperPC" class="pc img" src="img/gif/86682.gif" alt="papel">
+        <img id="rockPC" class="pc img" src="img/gif/piedra.png" alt="piedra">
+        <img id="cutPC" class="pc img" src="img/gif/tijeras-01.gif" alt="tijeras">
+        <img id="lizardPC" class="pc img" src="img/gif/lizard.gif" alt="lagarto">
+        <img id="spockPC" class="pc img" src="img/gif/Spock.gif" alt="spock">
+      </div>
+    </div>
+    <div class="clearfix margin-btn" id="botones">
+        <img id ="btnpiedra" class="boton" src="img/iconos/rock.png">
+        <img id ="btnpapel" class="boton" src="img/iconos/paper.png">
+        <img id ="btntijeras" class="boton" src="img/iconos/scissors.png">
+        <img id ="btnlagarto" class="boton" src="img/iconos/lizard.png">
+        <img id ="btnspock" class="boton" src="img/iconos/spock.png">
+    </div>
+    
+    <p id="btnrestart" class="margin-btn">Reiniciar</p>
+  </div>
+  <footer>
+    <p id="copy">todos los derechos reservados © CETAV 2018</p>
+  </footer>
+  <script src="js/script.js"></script>
+</body>
 </html>
