@@ -18,12 +18,14 @@ let btnTijeras = document.getElementById('btntijeras');
 let btnLagarto = document.getElementById('btnlagarto');
 let btnSpock = document.getElementById('btnspock');
 let btnRestart = document.getElementById('btnrestart');
+let btnenunciado = document.getElementById('btnenunciado');
+let btnpregunta = document.getElementById('btnpregunta');
 
 let usuario;
 let ganador;
 let pc;
 let resultado = document.getElementById('resultado');
-let mensaje = document.createElement('h3');
+let mensaje = document.createElement('h2');
 
     /* funciones esconder */ 
 function esconderPiedra() {
@@ -69,9 +71,11 @@ function esconderBotones() {
     btnTijeras.style.display = 'none';
     btnLagarto.style.display = 'none';
     btnSpock.style.display = 'none';
+    btnenunciado.style.display = 'none';
 }
 function esconderReiniciar() {
     btnRestart.style.display = 'none';
+    btnpregunta.style.display = 'none';
 }
 function esconderResultado() {
     resultado.style.display = 'none';
@@ -97,7 +101,8 @@ function mostrarRandom() {
     random.style.display = 'block';
 }
 function mostrarReiniciar() {
-    btnRestart.style.display = 'block';
+    btnRestart.style.display = 'inline';
+    btnpregunta.style.display = 'block';
 }
 
 function mostrarPiedraPC() {
@@ -294,33 +299,40 @@ function elegirGanador() {
                 resultado.appendChild(mensaje);
                 piedra.style.opacity = "0.3";
                 piedraPC.style.opacity = "0.3";
+                piedra.style.backgroundColor = "red";
+                piedraPC.style.backgroundColor = "red";
             }else if(usuario==2){
                 ganador= "¡GANAS! ";
                 ganador = ganador + " papel envuelve piedra";
                 mensaje.innerHTML = ganador;
                 resultado.appendChild(mensaje);
                 piedraPC.style.opacity = "0.3";
+                piedraPC.style.backgroundColor = "red";
+                papel.style.backgroundColor = "lightblue";
             }else if(usuario ==3){
                 ganador="¡PIERDES! ";
                 ganador = ganador + " piedra aplasta tijeras";
-
                 mensaje.innerHTML = ganador;
                 resultado.appendChild(mensaje);
                 tijeras.style.opacity = "0.3";
+                tijeras.style.backgroundColor = "red";
+                piedraPC.style.backgroundColor = "lightblue";
             }else if (usuario == 4){
                 ganador="¡PIERDES! ";
                 ganador = ganador + " piedra aplasta lagarto";
-                
                 mensaje.innerHTML = ganador;
                 resultado.appendChild(mensaje);
                 lagarto.style.opacity = "0.3";
+                lagarto.style.backgroundColor = "red";
+                piedraPC.style.backgroundColor = "lightblue";
             }else{
                 ganador= "¡GANAS! ";
                 ganador = ganador + " spock vaporiza piedra";
-
                 mensaje.innerHTML = ganador;
                 resultado.appendChild(mensaje);
                 piedraPC.style.opacity = "0.3";
+                piedraPC.style.backgroundColor = "red";
+                spock.style.backgroundColor = "lightblue";
             }
             break;
         case 2:
@@ -330,6 +342,8 @@ function elegirGanador() {
                 mensaje.innerHTML = ganador;
                 resultado.appendChild(mensaje);
                 piedra.style.opacity = "0.3";
+                piedra.style.backgroundColor = "red";
+                papelPC.style.backgroundColor = "lightblue";
             }else if(usuario==2){
                 ganador= "¡EMPATE! ";
                 ganador = ganador + " papel contra papel";
@@ -337,24 +351,32 @@ function elegirGanador() {
                 resultado.appendChild(mensaje);
                 papel.style.opacity = "0.3";
                 papelPC.style.opacity = "0.3";
+                papel.style.backgroundColor = "red";
+                papelPC.style.backgroundColor = "red";
             }else if(usuario == 3){
                 ganador="¡GANAS! ";
                 ganador = ganador + " tijeras cortan papel";
                 mensaje.innerHTML = ganador;
                 resultado.appendChild(mensaje);
                 papelPC.style.opacity = "0.3";
+                papelPC.style.backgroundColor = "red";
+                tijeras.style.backgroundColor = "lightblue";
             }else if (usuario == 4){
                 ganador= "¡GANAS! ";
                 ganador = ganador + " lagarto devora papel";
                 mensaje.innerHTML = ganador;
                 resultado.appendChild(mensaje);
                 papelPC.style.opacity = "0.3";
+                papelPC.style.backgroundColor = "red";
+                lagarto.style.backgroundColor = "lightblue";
             }else{
                 ganador= "¡PIERDES! ";
                 ganador = ganador + " papel desautoriza spock";
                 mensaje.innerHTML = ganador;
                 resultado.appendChild(mensaje);
                 spock.style.opacity = "0.3";
+                spock.style.backgroundColor = "red";
+                papelPC.style.backgroundColor = "lightblue";
             }
             break;
         case 3:
@@ -363,13 +385,17 @@ function elegirGanador() {
                 ganador = ganador + " piedra aplasta tijeras";
                 mensaje.innerHTML = ganador;
                 resultado.appendChild(mensaje);
-                piedraPC.style.opacity = "0.3";
+                tijerasPC.style.opacity = "0.3";
+                tijerasPC.style.backgroundColor = "red";
+                piedra.style.backgroundColor = "lightblue";
             }else if(usuario==2){
                 ganador="¡PIERDES! ";
                 ganador = ganador + " tijeras cortan papel";
                 mensaje.innerHTML = ganador;
                 resultado.appendChild(mensaje);
                 papel.style.opacity = "0.3";
+                papel.style.backgroundColor = "red";
+                tijerasPC.style.backgroundColor = "lightblue";
             }else if(usuario ==3){
                 ganador= "¡EMPATE! ";
                 ganador = ganador + " tijeras contra tijeras";
@@ -377,18 +403,24 @@ function elegirGanador() {
                 resultado.appendChild(mensaje);
                 tijeras.style.opacity = "0.3";
                 tijerasPC.style.opacity = "0.3";
+                tijeras.style.backgroundColor = "red";
+                tijerasPC.style.backgroundColor = "red";
             }else if (usuario == 4){
                 ganador="¡PIERDES! ";
                 ganador = ganador + " tijeras decapitan lagarto";
                 mensaje.innerHTML = ganador;
                 resultado.appendChild(mensaje);
                 lagarto.style.opacity = "0.3";
+                lagarto.style.backgroundColor = "red";
+                tijerasPC.style.backgroundColor = "lightblue";
             }else{
                 ganador= "¡GANAS! ";
                 ganador = ganador + " spock rompe tijeras";
                 mensaje.innerHTML = ganador;
                 resultado.appendChild(mensaje);
                 tijerasPC.style.opacity = "0.3";
+                tijerasPC.style.backgroundColor = "red";
+                spock.style.backgroundColor = "lightblue";
             }
             break;
         case 4:
@@ -398,18 +430,24 @@ function elegirGanador() {
                 mensaje.innerHTML = ganador;
                 resultado.appendChild(mensaje);
                 lagartoPC.style.opacity = "0.3";
+                lagartoPC.style.backgroundColor = "red";
+                piedra.style.backgroundColor = "lightblue";
             }else if(usuario==2){
                 ganador="¡PIERDES! ";
                 ganador = ganador + " lagarto devora papel";
                 mensaje.innerHTML = ganador;
                 resultado.appendChild(mensaje);
                 papel.style.opacity = "0.3";
+                papel.style.backgroundColor = "red";
+                lagartoPC.style.backgroundColor = "lightblue";
             }else if(usuario ==3){
                 ganador= "¡GANAS! ";
                 ganador = ganador + " tijeras decapitan lagarto";
                 mensaje.innerHTML = ganador;
                 resultado.appendChild(mensaje);
                 lagartoPC.style.opacity = "0.3";
+                lagartoPC.style.backgroundColor = "red";
+                tijeras.style.backgroundColor = "lightblue";
             }else if (usuario == 4){
                 ganador= "¡EMPATE! ";
                 ganador = ganador + " lagarto contra lagarto";
@@ -417,12 +455,16 @@ function elegirGanador() {
                 resultado.appendChild(mensaje);
                 lagarto.style.opacity = "0.3";
                 lagartoPC.style.opacity = "0.3";
+                lagarto.style.backgroundColor = "red";
+                lagartoPC.style.backgroundColor = "red";
             }else{
                 ganador="¡PIERDES! ";
                 ganador = ganador + " lagarto envenena spock";
                 mensaje.innerHTML = ganador;
                 resultado.appendChild(mensaje);
                 spock.style.opacity = "0.3";
+                spock.style.backgroundColor = "red";
+                lagartoPC.style.backgroundColor = "lightblue";
             }
             break;
         case 5:
@@ -432,24 +474,32 @@ function elegirGanador() {
                 mensaje.innerHTML = ganador;
                 resultado.appendChild(mensaje);
                 piedra.style.opacity = "0.3";
+                piedra.style.backgroundColor = "red";
+                spockPC.style.backgroundColor = "lightblue";
             }else if(usuario==2){
                 ganador= "¡GANAS! ";
                 ganador = ganador + " papel desautoriza a spock";
                 mensaje.innerHTML = ganador;
                 resultado.appendChild(mensaje);
                 spockPC.style.opacity = "0.3";
+                spockPC.style.backgroundColor = "red";
+                papel.style.backgroundColor = "lightblue";
             }else if(usuario ==3){
                 ganador="¡PIERDES! ";
                 ganador = ganador + " spock rompe tijeras";
                 mensaje.innerHTML = ganador;
                 resultado.appendChild(mensaje);
                 tijeras.style.opacity = "0.3";
+                tijeras.style.backgroundColor = "red";
+                spockPC.style.backgroundColor = "lightblue";
             }else if (usuario == 4){
                 ganador= "¡GANAS! ";
                 ganador = ganador + " lagarto envenena a spock";
                 mensaje.innerHTML = ganador;
                 resultado.appendChild(mensaje);
                 spockPC.style.opacity = "0.3";
+                spockPC.style.backgroundColor = "red";
+                lagarto.style.backgroundColor = "lightblue";
             }else{
                 ganador= "¡EMPATE! ";
                 ganador = ganador + " spock contra spock";
@@ -457,6 +507,8 @@ function elegirGanador() {
                 resultado.appendChild(mensaje);
                 spock.style.opacity = "0.3";
                 spockPC.style.opacity = "0.3";
+                spock.style.backgroundColor = "red";
+                spockPC.style.backgroundColor = "red";
             }
             break;
     }
