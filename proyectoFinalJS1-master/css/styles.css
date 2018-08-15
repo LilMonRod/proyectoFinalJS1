@@ -65,8 +65,8 @@ body{
   background-color: #b5daf0;
 }
 .boton{
-  width: 70px;
-  height: 70px;
+  width: 40px;
+  height: 40px;
   float: left;
   margin-left: 70px;
   padding: 5px;
@@ -111,5 +111,5 @@ h3 {
 }
 
 #btnpiedra{
-  margin-left: 286px;
+  margin-left: 353px;
 }
